@@ -60,12 +60,11 @@ header .logo img {
 }
 
 /* Hero Section */
-/* Hero Section */
 .hero {
-    background-image: url('media/WhatsApp Image 2025-01-06 at 15.54.32.jpeg'); /* Add the correct image path */
-    background-size: 50%; /* Decrease the image size to 50% of the container */
-    background-position: center;
-    height: 100vh;
+    background-image: url('media/hero-image.jpg'); /* Use the correct image path */
+    background-size: 50%; /* Ensure the image covers the entire hero section */
+    background-position: center; /* Keep the image centered */
+    height: 100vh; /* Make the section take full viewport height */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,6 +73,7 @@ header .logo img {
     position: relative;
     padding: 0 20px;
 }
+
 
 /* Overlay to darken the background */
 .hero::before {
@@ -605,24 +605,7 @@ body {
     }
 }
 
-/* Optional: Add arrows for navigation (if you want a manual slider) */
-.carousel-container::before, .carousel-container::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    z-index: 10;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 18px;
-    cursor: pointer;
-}
+
 
 .carousel-container::before {
     left: 10px;
@@ -739,6 +722,7 @@ body {
 
 
 /* Products Section */
+
 
 
 /* General Reset */
@@ -900,4 +884,126 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+
+/*products.html*/
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Container Styling */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+/* Title Styling */
+h1 {
+    text-align: center;
+    color: #2a7d3e;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+/* Product Section Styling */
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Individual Product Item Styling */
+.product-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Image Styling */
+.product-item img {
+    width: 100%;
+    max-height: 300px;  /* Increased size */
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Product Name */
+.product-item h3 {
+    color: #2a7d3e;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+/* Product Description */
+.product-item p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Buy Now Button Styling */
+.product-item a {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #2a7d3e;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.product-item a:hover {
+    background-color: #245c2f;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .product-item {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-item {
+        width: 100%;
+    }
+    h1 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-item img {
+        max-height: 250px;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
 }
