@@ -93,3 +93,13 @@ function updateSlider() {
     const newTransformValue = -(currentTestimonialIndex * (100 / 3)) + '%';
     document.querySelector('.testimonial-list').style.transform = `translateX(${newTransformValue})`;
 }
+
+//about.html
+
+document.addEventListener('DOMContentLoaded', () => {
+    const carousel = document.getElementById('carousel');
+
+    // Duplicate the content for seamless looping
+    const carouselContent = carousel.innerHTML;
+    carousel.innerHTML += carouselContent;
+});
