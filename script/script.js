@@ -41,3 +41,26 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCount();
     });
 });
+
+//photo bar 
+
+const carousel = document.getElementById('carousel');
+
+function moveCarousel() {
+    const totalWidth = carousel.scrollWidth;
+    const visibleWidth = carousel.offsetWidth;
+    const moveDistance = totalWidth - visibleWidth;
+
+    // Loop the carousel by shifting it to the left and resetting it
+    carousel.style.transition = 'transform 0.5s ease-in-out';
+    carousel.style.transform = `translateX(-${moveDistance}px)`;
+
+    // Reset position after transition
+    setTimeout(() => {
+        carousel.style.transition = 'none';
+        carousel.style.transform = 'translateX(0)';
+    }, 500); // Match the transition time
+}
+
+// Move the carousel every 5 seconds
+setInterval(moveCarousel, 5000);
