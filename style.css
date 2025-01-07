@@ -998,7 +998,7 @@ footer a:hover {
 
 /* Contact Us Section Styling */
 .cta-button-container {
-    background-color: #2a7d3e;
+    background-color: #edf4ef;
     padding: 40px 0;
     text-align: center;
 }
@@ -1006,7 +1006,7 @@ footer a:hover {
 /* Button Styling */
 .cta-button {
     background-color: #ffffff;
-    color: #2a7d3e;
+    color: #e6ede8;
     padding: 15px 30px;
     font-size: 1.5em;
     text-decoration: none;
@@ -1017,7 +1017,7 @@ footer a:hover {
 
 /* Hover Effect */
 .cta-button:hover {
-    background-color: #2a7d3e;
+    background-color: #f1f8f2;
     color: #ffffff;
 }
 
