@@ -461,6 +461,8 @@ p {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     max-width: 1200px;
     margin: 0 auto;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+
 }
 
 /* Counter item styling */
@@ -468,12 +470,12 @@ p {
     text-align: center;
     font-family: 'Arial', sans-serif;
     color: #011b66;
-    flex: 1;
-}
+    flex: 1 1 150px; /* Flexible size for small screens */
+    margin: 10px; /* Add margin for spacing in wrapped layout */}
 
 /* Counter image styling */
 .counter-image {
-    width: 80px; /* Adjust the size of the image */
+    width: 60px; /* Adjust image size for smaller screens */
     height: 80px;
     margin-bottom: 15px;
     border-radius: 50%; /* Make images circular if desired */
@@ -482,7 +484,7 @@ p {
 
 /* Counter number styling */
 .counter {
-    font-size: 3rem;
+    font-size: 2.5rem; /* Slightly smaller font size */
     font-weight: bold;
     color: #27ae60;
     margin-bottom: 10px;
@@ -496,11 +498,36 @@ p {
 
 /* Counter description styling */
 .counter-description {
-    font-size: 1.2rem;
+    font-size: 1rem; /* Adjust font size for readability */
     color: #555;
     margin-top: 5px;
 }
 
+/* Media Query for Smartphones */
+@media (max-width: 768px) {
+    .counter-container {
+        flex-direction: column; /* Stack items vertically */
+        padding: 20px;
+    }
+    
+    .counter-item {
+        flex: none; /* Disable flex-grow for uniform spacing */
+        margin-bottom: 20px; /* Add spacing between stacked items */
+    }
+
+    .counter-image {
+        width: 50px;
+        height: 50px;
+    }
+
+    .counter {
+        font-size: 2rem; /* Smaller font size for counters */
+    }
+
+    .counter-description {
+        font-size: 0.9rem; /* Smaller text for descriptions */
+    }
+}
 
 /* Products Section */
 .products {
