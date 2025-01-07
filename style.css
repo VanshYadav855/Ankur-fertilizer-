@@ -59,6 +59,36 @@ header .logo img {
     color: white;
 }
 
+/* Media Query for Tablets and Small Screens */
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: center; /* Center the items on small screens */
+    }
+
+    .navbar a {
+        padding: 6px 10px;  /* Adjust padding for smaller screens */
+        font-size: 12px; /* Further reduce font size */
+    }
+}
+
+/* Media Query for Very Small Screens (Phones) */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column; /* Stack navbar items vertically */
+        justify-content: flex-start; /* Align items to the top */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    .navbar a {
+        width: 100%;  /* Make the links take full width */
+        text-align: left; /* Align the text to the left */
+        padding: 10px 15px;  /* Increase padding for better touch interaction */
+        font-size: 14px; /* Maintain font size */
+        margin: 5px 0;  /* Reduce margin between items */
+    }
+}
+
+
 /* Hero Section */
 .hero {
     background-image: url('media/hero-image.jpg'); /* Use the correct image path */
