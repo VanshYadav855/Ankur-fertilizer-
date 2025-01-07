@@ -64,3 +64,32 @@ function moveCarousel() {
 
 // Move the carousel every 5 seconds
 setInterval(moveCarousel, 5000);
+
+
+//testimonials
+
+// JavaScript for slider functionality (continuous sliding)
+let currentTestimonialIndex = 0;
+const testimonials = document.querySelectorAll('.testimonial-item');
+const totalTestimonials = testimonials.length;
+
+document.getElementById('next').addEventListener('click', () => {
+    currentTestimonialIndex++;
+    if (currentTestimonialIndex >= totalTestimonials) {
+        currentTestimonialIndex = 0; // Reset to the first testimonial
+    }
+    updateSlider();
+});
+
+document.getElementById('prev').addEventListener('click', () => {
+    currentTestimonialIndex--;
+    if (currentTestimonialIndex < 0) {
+        currentTestimonialIndex = totalTestimonials - 1; // Go to the last testimonial
+    }
+    updateSlider();
+});
+
+function updateSlider() {
+    const newTransformValue = -(currentTestimonialIndex * (100 / 3)) + '%';
+    document.querySelector('.testimonial-list').style.transform = `translateX(${newTransformValue})`;
+}
