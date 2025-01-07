@@ -103,3 +103,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const carouselContent = carousel.innerHTML;
     carousel.innerHTML += carouselContent;
 });
+
+//navigation bar
+// JavaScript for toggling the hamburger menu
+const hamburger = document.getElementById('hamburger');
+const navbar = document.querySelector('.navbar');
+
+// Toggle the navbar visibility when the hamburger icon is clicked
+hamburger.addEventListener('click', function() {
+    navbar.classList.toggle('active');
+});
