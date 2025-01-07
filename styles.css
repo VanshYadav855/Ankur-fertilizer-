@@ -62,7 +62,7 @@ header .logo img {
 /* Hero Section */
 /* Hero Section */
 .hero {
-    background-image: url('media/Screenshot\ 2025-01-06\ at\ 5.52.31\ PM.png'); /* Add the correct image path */
+    background-image: url('media/WhatsApp Image 2025-01-06 at 15.54.32.jpeg'); /* Add the correct image path */
     background-size: 50%; /* Decrease the image size to 50% of the container */
     background-position: center;
     height: 100vh;
@@ -445,6 +445,60 @@ p {
     #rnd p {
         font-size: 16px;
     }
+}
+
+
+/* achievement section */
+
+/* Counter container styling */
+.counter-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f4f4f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Counter item styling */
+.counter-item {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #011b66;
+    flex: 1;
+}
+
+/* Counter image styling */
+.counter-image {
+    width: 80px; /* Adjust the size of the image */
+    height: 80px;
+    margin-bottom: 15px;
+    border-radius: 50%; /* Make images circular if desired */
+    object-fit: cover;
+}
+
+/* Counter number styling */
+.counter {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #27ae60;
+    margin-bottom: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Hover effect */
+.counter-item:hover .counter {
+    transform: scale(1.1);
+}
+
+/* Counter description styling */
+.counter-description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 5px;
 }
 
 

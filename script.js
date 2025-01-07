@@ -18,3 +18,26 @@ setInterval(changeBackground, 4000); // Change every 4 seconds
 
 // Initialize with the first background
 changeBackground();
+
+//achievement section //
+document.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200; // Adjust speed for counting
+
+    counters.forEach(counter => {
+        const updateCount = () => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+
+            const increment = Math.ceil(target / speed);
+
+            if (count < target) {
+                counter.innerText = count + increment;
+                setTimeout(updateCount, 10);
+            } else {
+                counter.innerText = target + '+'; // Add '+' after reaching the target
+            }
+        };
+        updateCount();
+    });
+});
