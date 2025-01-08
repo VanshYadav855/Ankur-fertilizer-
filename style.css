@@ -209,6 +209,49 @@ header .logo img {
 }
 
 
+/* Hamburger Menu */
+.hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+/* Media Query for Smartphones */
+@media (max-width: 480px) {
+    .navbar {
+        display: none; /* Initially hide the navbar */
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .navbar a {
+        width: 100%;
+        text-align: left;
+        padding: 10px 15px;
+        font-size: 16px;
+        margin: 5px 0;
+    }
+
+    .hamburger {
+        display: flex; /* Show the hamburger menu */
+        position: absolute;
+        top: 10px;
+        right: 15px;
+    }
+
+    .navbar.active {
+        display: flex; /* Show navbar when active */
+    }
+}
+
 
 
 .container {
