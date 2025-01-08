@@ -59,39 +59,10 @@ header .logo img {
     color: white;
 }
 
-/* Media Query for Smartphones */
-@media (max-width: 480px) {
-    .navbar {
-        display: none; /* Initially hide the navbar */
-        flex-direction: column;
-        width: 100%;
-        align-items: flex-start;
-    }
-
-    .navbar a {
-        width: 100%;
-        text-align: left;
-        padding: 10px 15px;
-        font-size: 16px;
-        margin: 5px 0;
-    }
-
-    .hamburger {
-        display: flex; /* Show the hamburger menu */
-        position: absolute;
-        top: 10px;
-        right: 15px;
-    }
-
-    .navbar.active {
-        display: flex; /* Show navbar when active */
-    }
-}
-
 /* Hero Section */
 .hero {
-    background-image: url('media/hero-image.jpg'); /* Use the correct image path */
-    background-size: 50%; /* Ensure the image covers the entire hero section */
+    background-image: url('media/green-ripening-soybean-field-agricultural-landscape.webp'); /* Use the correct image path */
+    background-size: cover; /* Ensure the image covers the entire hero section */
     background-position: center; /* Keep the image centered */
     height: 100vh; /* Make the section take full viewport height */
     display: flex;
@@ -1484,7 +1455,6 @@ body {
 .about-section .cta-button:hover {
     background-color: #1b5e20;
 }
-
 
 /* Organic Fertilizer Partners Section */
 #organic-fertilizer-partners {
