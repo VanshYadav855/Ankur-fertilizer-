@@ -105,12 +105,28 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 //navigation bar
-// JavaScript for toggling the hamburger menu
-const hamburger = document.getElementById('hamburger');
-const navbar = document.querySelector('.navbar');
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const navbar = document.querySelector('.navbar');
 
-// Toggle the navbar visibility when the hamburger icon is clicked
-hamburger.addEventListener('click', function() {
-    navbar.classList.toggle('active');
+    console.log("Hamburger:", hamburger);
+    console.log("Navbar:", navbar);
+
+    if (hamburger && navbar) {
+        hamburger.addEventListener('click', (e) => {
+            console.log("Hamburger clicked"); 
+            navbar.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!navbar.contains(e.target) && !hamburger.contains(e.target)) {
+                console.log("Click outside, closing navbar");
+                navbar.classList.remove('active');
+            }
+        });
+    } else {
+        console.error("Hamburger or Navbar not found!");
+    }
 });
+
  

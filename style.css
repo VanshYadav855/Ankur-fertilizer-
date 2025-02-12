@@ -215,8 +215,25 @@ header .logo img {
 
     /* Stack the navbar links vertically on very small screens */
     .navbar {
+        display: none;
         flex-direction: column;
-        align-items: center;
+        width: 100%;
+        position: absolute;
+        top: 60px;  /* Add this to position below header */
+        left: 0;    /* Add this to ensure full width */
+        background-color: #011b66;  /* Match header color */
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 100;
     }
 
     .navbar a {
